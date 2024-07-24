@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  ConfigData.cpp
+  ImageObject.cpp
+  MainFrm.cpp
+  MainProject.cpp
+C:\CodingTestPDH\MainProject\ImageObject.h(4,10): error C1083: 포함 파일을 열 수 없습니다. 'opencv2\opencv.hpp': No such file or directory
+C:\CodingTestPDH\MainProject\MainFrm.h(8,10): error C1083: 포함 파일을 열 수 없습니다. 'opencv2\opencv.hpp': No such file or directory
+C:\CodingTestPDH\MainProject\MainFrm.h(8,10): error C1083: 포함 파일을 열 수 없습니다. 'opencv2\opencv.hpp': No such file or directory
+  MainProjectDoc.cpp
+  MainProjectView.cpp
+C:\CodingTestPDH\MainProject\MainFrm.h(8,10): error C1083: 포함 파일을 열 수 없습니다. 'opencv2\opencv.hpp': No such file or directory

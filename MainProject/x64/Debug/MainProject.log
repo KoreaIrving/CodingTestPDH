@@ -1,0 +1,13 @@
+﻿  pch.cpp
+  ConfigData.cpp
+  MainFrm.cpp
+C:\CodingTestPDH\MainProject\ConfigData.cpp(9,27): error C2065: 'NULL_CString': 선언되지 않은 식별자입니다.
+C:\CodingTestPDH\MainProject\ConfigData.cpp(10,27): error C2065: 'NULL_CString': 선언되지 않은 식별자입니다.
+C:\CodingTestPDH\MainProject\ConfigData.cpp(25,27): error C2065: 'NULL_CString': 선언되지 않은 식별자입니다.
+C:\CodingTestPDH\MainProject\ConfigData.cpp(35,25): error C2065: 'NULL_CString': 선언되지 않은 식별자입니다.
+C:\CodingTestPDH\MainProject\ConfigData.cpp(37,25): error C2065: 'NULL_CString': 선언되지 않은 식별자입니다.
+C:\CodingTestPDH\MainProject\ConfigData.cpp(51,24): error C2065: 'NULL_CString': 선언되지 않은 식별자입니다.
+  MainProject.cpp
+  MainProjectDoc.cpp
+  MainProjectView.cpp
+  코드를 생성하고 있습니다...
