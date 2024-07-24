@@ -92,36 +92,31 @@ bool Filtering_Implement(CImageObject Image_Input,CImageObject& Image_Output, in
 			int nSum = 0;
 			int nCount = 0;
 			
-
-
-
-			// 필터 적용
 			for (int i = -nKernel_Range; i <= nKernel_Range; i++)
 			{
 				for (int j = -nKernel_Range; j <= nKernel_Range; j++)
 				{
-					int kx = x + j;
-					int ky = y + i;
+					int xj = x + j;
+					int yi = y + i;
 
 
-					// Reflect 101 border handling
-					if (ky < 0) ky = -ky;
-					if (kx < 0) kx = -kx;
-					if (kx >= Image_Input.nWidth)
-						kx = 2 * Image_Input.nWidth - kx - 2;
-					if (ky >= Image_Input.nHeight)
-						ky = 2 * Image_Input.nHeight - ky - 2;
+					if (xj < 0) xj = -xj;
+					if (xj >= Image_Input.nWidth)
+						xj = 2 * Image_Input.nWidth - xj - 2;
+
+					if (yi < 0) yi = -yi;
+					if (yi >= Image_Input.nHeight)
+						yi = 2 * Image_Input.nHeight - yi - 2;
 
 					
-					nSum += Image_Input.pBuffer[ky * Image_Input.nWidth + kx]; // 주변 픽셀들의 값을 다 더함
-					nCount++; // 픽셀의 수 카운트
+					nSum += Image_Input.pBuffer[yi * Image_Input.nWidth + xj];
+					nCount++;
 
 				}
 			}
-			// 평균값 계산
-			BYTE average = round((double)nSum / (double)nCount); // 주변 픽셀들의 총합을 픽셀 수로 나눠서 평균
 
-			// 결과를 임시 이미지에 저장
+			BYTE average = round((double)nSum / (double)nCount); 
+
 			Image_Output.pBuffer[y * Image_Input.nWidth + x] = average;
 		}
 	}
