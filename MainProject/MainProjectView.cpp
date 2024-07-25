@@ -131,14 +131,13 @@ void CMainProjectView::OnBnClickedBtnLoad()
 
 	CString strLog(_T(""));
 
-	if (m_Target_Image.Read(m_pFrame->GetTargetImagePath(), strLog) == false)
+	if (!m_Target_Image.Read(m_pFrame->GetTargetImagePath(), strLog))
 	{
 		m_pFrame->WriteLog(strLog);
 		return;
 	}
-	else
 
-	strLog = _T("Success to Image load!");
+	strLog.Format(_T("Success to Image Load! [Width = %d , Height = %d]"), m_Target_Image.nWidth, m_Target_Image.nHeight);
 	m_pFrame->WriteLog(strLog);
 
 	if (m_Target_Image.Draw(&m_View_Target, strLog) == false)

@@ -1,6 +1,10 @@
-[ 2024/07/25 00:47:21:435 ]	Success to Image load!
-[ 2024/07/25 00:47:22:161 ]	Success to Image Blur(OpenCV)
-[ 2024/07/25 00:47:22:206 ]	Success to Image Blur(Implement)
-[ 2024/07/25 00:47:24:312 ]	Success to Image Save
-[ 2024/07/25 00:47:25:524 ]	Success to Image Save
-[ 2024/07/25 00:47:38:879 ]	Success to Image Matching
+[ 2024/07/25 22:48:49:232 ]	Success to Log File Load!
+[ 2024/07/25 22:48:52:122 ]	Success to Config File Load!
+[ 2024/07/25 22:48:53:153 ]	Success to Image Load! [Width = 256 , Height = 256]
+[ 2024/07/25 22:48:53:884 ]	Success to Blur DLL(OpenCV) File Load!
+[ 2024/07/25 22:48:53:891 ]	Success to Image Blur(OpenCV)
+[ 2024/07/25 22:48:53:928 ]	Success to Blur DLL(Implement) File Load!
+[ 2024/07/25 22:48:53:969 ]	Success to Image Blur(Implement)
+[ 2024/07/25 22:48:55:395 ]	Success to Image Save
+[ 2024/07/25 22:48:56:867 ]	Success to Image Save
+[ 2024/07/25 22:49:09:204 ]	Success to Image Matching

@@ -52,17 +52,19 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_pLog_Data = new CLogData(LogFilePath);
 	if (!m_pLog_Data->OpenLogFile())
 	{
-		AfxMessageBox(_T("Failed to Log File read!"));
+		AfxMessageBox(_T("Failed to Log File Load!"));
 		PostQuitMessage(0);
 	}
+
+	CString strLog(_T(""));
+	strLog = _T("Success to Log File Load!");
+	WriteLog(strLog);
 
 	CFileDialog dlg(TRUE, _T("ini"), NULL, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT, _T("Config Files (*.ini)|*.ini||"));
 
 	if (dlg.DoModal() == IDCANCEL) {
 		return 0;
 	}
-
-
 
 	CString strConfigPath(_T(""));
 	strConfigPath = dlg.GetPathName();
@@ -76,7 +78,8 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		PostQuitMessage(0);
 	}
 	
-
+	strLog = _T("Success to Config File Load!");
+	WriteLog(strLog);
 
 	m_strTargetImage_Path	= m_pConfig_Data -> GetLoadImagePath();
 	m_strResultImage_Path	= m_pConfig_Data -> GetSaveImagePath();
@@ -141,6 +144,13 @@ bool CMainFrame::Blurring(CImageObject Image_Input, CImageObject& Image_Output, 
 	if (!LoadDLL(nType, str_Error_Log))
 		return false;
 	
+	CString strLog(_T(""));
+	if(nType == TYPE_OPENCV)
+		strLog = _T("Success to Blur DLL(OpenCV) File Load!");
+	if(nType == TYPE_IMPLEMENT)
+		strLog = _T("Success to Blur DLL(Implement) File Load!");
+
+	WriteLog(strLog);
 
 	bool bResult = false;
 	if (nType == TYPE_OPENCV)
